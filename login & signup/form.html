@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(0, 153, 255);
+        }
+
+        form{
+            background-color: #fff;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 30px 25px;
+            border: 1px solid rgb(74, 224, 224);
+            border-radius: 10px;
+        
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            height: 5vh;
+            border-radius: 20px;
+            border: 1px solid rgb(0, 153, 255);
+            font-weight: bold;
+            
+        }
+        form input[type="submit"]{
+            border-radius: 20px;
+            border: 0;
+            margin:20px 0 0;
+            background-color: rgb(0, 153, 255);
+            cursor: pointer;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>  
+    <form >
+        <h2>Welcome</h2>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="name">
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="password">
+        
+        <input class="btn" type="submit" value="Login" id="login">
+        <input class="btn" type="submit" value="Signup" id="Signup">
+        <!--<button>Login</button>
+        <button>Signup</button> -->
+    </form>
+
+    <script>
+        //this is our first test
+        //console.log("Hello World");
+
+        function submit(id) {
+            return document.getElementById(id)
+        }
+        let name = submit("name");
+        let password = submit("password");
+        let login = submit("login");
+        let Signup = submit("signup");
+
+        Submit.addEventListener("click", function(e){
+            e.preventDefault();
+            if (name.value == ""){
+                alert("Please Enter ur name");
+            }else if (password.value == ""){
+                alert("pls Enter ur password");
+            }else{
+                alert("login Successful");
+            }
+
+        }) 
+    </script>
+</body>
+</html>
